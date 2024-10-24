@@ -1,0 +1,177 @@
+.contactlink{
+    height: 84vh;
+    position: relative;
+    top: 8vh;
+    background-color: #f49200;
+    display: flex;
+    overflow: hidden;
+}
+
+.contactimage img{
+    width: 1023px;
+}
+
+.contactinfo{
+    padding-top: 6vh;
+    padding-left: 2vw ;
+    
+}
+
+.contactinfo h3{
+    font-weight: 400;
+    font-size: 4vh;
+    position: relative;
+    bottom: 5vh;
+}
+
+.contactinfo h4{
+    
+    word-spacing: 1px;
+    font-weight: 500;
+    font-size: 3vh;
+    position: relative;
+    bottom: 5vh; 
+    left: .4vw;  
+}
+
+form.form{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    position: relative;
+
+}
+
+.name_form{
+    display:flex;
+    position: relative;
+    left: 0.2vw;
+    gap: 10px;
+    bottom: 3vh;
+}
+.email_form{
+    display:flex;
+    position: relative;
+    right: 0.1vw;
+    gap: 10px;
+    
+}
+input.F_name1{
+    width: 10vw;
+    height: 4vh;
+}
+
+input.L_name1{
+    width: 10vw;
+    height: 4vh; 
+}
+
+input.email_1{
+    width: 10vw;
+    height: 4vh;
+    position: relative;
+    left: 0.3vw;
+    top: -1.5vh;
+}
+input.phone_1{
+    width: 10vw;
+    height: 4vh;
+    position: relative;
+    left: 0.3vw;
+    top: -1.5vh;
+}
+
+input.dob_1{
+    width: 10vw;
+    height: 4vh;
+    position: relative;
+    left: 0.3vw;
+    top: -0.1vh;
+}
+
+select{
+    height: 6.1vh;
+    position: relative;
+    top: -0.1vh;
+    width: 11vw;
+    left: .9vw;
+}
+select.department{
+    height: 6vh;
+    position: relative;
+    top: 2.5vh;
+    width: 22.6vw;
+    left: 0.4vw;
+    
+}
+
+select.selecting{
+    height: 6vh;
+    position: relative;
+    top: 3.5vh;
+    width: 22.6vw;
+    left: 0.4vw;
+}
+
+input.appointment_date{
+    width: 21.7vw;
+    height: 4vh;
+    position: relative;
+    left: 0.3vw;
+    top: 1.5vh;
+}
+textarea.ADDRESS{
+    width: 22.5vw;
+    position: relative;
+    top: 4.5vh;
+    left: 1vh;
+}
+
+.btn1{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 4vh;
+    left: .4vw;
+}
+
+Button.btn4{
+    width: 11vw;
+    color: #f49200;
+    background-color: #000;
+}
+Button.btn5{
+    width: 11vw;
+    color: #f49200;
+    background-color: #000;
+}
+Button.btn4:hover{
+    
+    color: #343434;
+    background-color: white;
+}
+Button.btn5:hover{
+ 
+    color: #343434;
+    background-color: white;
+}
+.box{
+    height: 1vh;
+    position: relative;
+    left: 1vw;
+    display:flex;
+    align-items: center;
+    font-weight: 600;
+    bottom: 68vh;
+
+}
+.box>p{
+    font-size: 1.5vh;
+    position: relative;
+    left: 43vh;
+}
+
+input.checkBOX{
+    position: relative;
+    left: 2vh;
+}

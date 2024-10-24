@@ -1,0 +1,88 @@
+.lawyercard{
+    margin: 30px;
+    border: 0px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0,0,0,0.75);
+    width: 20vw;
+    height: 45vh;
+    cursor: pointer;
+    background-color: #f49200;  
+    transition: transform all ease;
+}
+
+.lawyercard:hover{
+    transform: scale(1.08);
+}
+
+
+.lawyercard > img{
+    width: 24vw;
+    height: 36vh;
+    object-position: center;
+}
+
+.lawyercard__info{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.lawyercard__info > h3{
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    left: 1vw;
+}
+
+.lawyercard__info > h4{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 15px;
+}
+
+
+    @media only screen and (max-width:320px) {
+        .lawyercard{
+            width: 85%;
+            height: 45vh;
+            margin: 30px;
+            border: 0px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 6px 18px -9px rgba(0,0,0,0.75);
+            cursor: pointer;
+            background-color: #f49200;  
+            transition: transform all ease;
+        }
+        
+        .lawyercard:hover{
+            transform: scale(1.08);
+        }
+        
+        
+        .lawyercard > img{
+            width: 100%;
+            height: 80%;
+            object-position: center;
+        }
+        
+        .lawyercard__info{
+            display:flex;
+            flex-direction: column;
+        
+        }
+        
+        .lawyercard__info > h3{
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .lawyercard__info > h4{
+            font-size: 14px;
+        font-weight: 300;
+        margin: 0 15px;
+        text-align: center;
+    }
+    }

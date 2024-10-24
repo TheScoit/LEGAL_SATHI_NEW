@@ -1,0 +1,189 @@
+.footer{
+    position: relative;
+    top: 120vh;
+    height: 80vh;
+    background-color: #222831;
+    display:flex;
+    gap: 16px;    
+}
+
+.footer1 {
+    position: relative;
+    left: 12vw;
+    height: 80vh;
+    width: 20vw;
+    /* background-color: red; */
+}
+
+.footer1 h1{
+    font-size: 4vh;
+    position: relative;
+    top: 9vh;
+    color: white;
+}
+.footer1 h3{
+    font-size: 2.5vh;
+    position: relative;
+    top: 8vh;
+    text-transform: uppercase;
+    color: #f49200;
+}
+.footer1 p{
+    font-size: 2.3vh;
+    position: relative;
+    top: 13vh;
+    text-align: start;
+    color: lightgrey;
+}
+
+
+.footer2 {
+    position: relative;
+    left: 12vw;
+    height: 80vh;
+    width: 20vw;
+    /* background-color: blue; */
+    
+}
+.footer2 h2{
+    color: white;
+    position: relative;
+    top: 10vh;
+    font-weight: 400;
+    font-size: 3vh;
+    left: 3vw;
+}
+.footer2 h4{
+    position: relative;
+    top: 16vh;
+    left: 3vw;
+    color: lightgray;
+    line-height: 5vh;
+    cursor: pointer;
+}
+
+.footer2 h4:hover{
+    color: #f49200;
+}
+.footer3 {
+    position: relative;
+    left: 12vw;
+    height: 80vh;
+    width: 20vw;
+    
+}
+.footer3 h3{
+    color: white;
+    position: relative;
+    top: 10vh;
+    font-weight: 400;
+    font-size: 3vh;
+    left: 0.3vw;
+}
+.footer3 h5{
+    color: lightgray;
+    font-size: 2.1vh;
+    position: relative;
+    top: 16vh;   
+    display: flex;
+}
+.location__info h5{
+    padding: 10px;
+    display: inline-flex;
+    /* background-color: red; */
+}
+
+.mail__info h5{
+    padding: 10px;
+    display: inline-flex; 
+}
+
+.call__info h5{
+    padding: 10px;
+    display: inline-flex;
+ 
+}
+
+.call__info h5:hover{
+    color: #f49200;
+    cursor: pointer;
+}
+.mail__info h5:hover{
+    color: #f49200;
+}
+.location{
+    position: relative;
+    top: 0.4vh;
+    right: 0.3vw;
+    font-size: 2.6vh;
+}
+
+.mail{
+    position: relative;
+    top: 0.4vh;
+    right: 0.3vw;
+    font-size: 2.6vh;
+}
+
+.call{
+    position: relative;
+    top: 0.4vh;
+    right: 0.3vw;
+    font-size: 2.6vh;
+}
+.footer4 {
+    position: relative;
+    left: 12vw;
+    height: 80vh;
+    width: 20vw;
+    /* background-color: green; */
+}
+
+.footer4 h3{
+    color: white;
+    position: relative;
+    top: 10vh;
+    font-weight: 400;
+    font-size: 3vh;
+    left: 1vw;
+}
+
+.openingdays{
+    position: relative;
+    top: 14vh;
+    /* background-color: red; */
+    padding:20px;
+}
+.openingdays h4{
+    position: relative;
+    bottom:  1vh;
+    color: #f49200;
+}
+.openingdays p{
+    color: lightgray;
+}
+.vacations{
+    position: relative;
+    top: 14vh;
+    padding: 20px;
+}
+.vacations h4{
+    position: relative;
+    bottom:  1vh;
+
+    color: #f49200;
+}
+.vacations p{
+    color: lightgray;
+}
+
+h6{
+    height: 6vh;
+    position: relative;
+    top: 70vh;
+    /* background: #000; */
+    color: lightgray;
+    font-size: 2vh;
+    right: 38vw;
+    white-space: nowrap;
+}

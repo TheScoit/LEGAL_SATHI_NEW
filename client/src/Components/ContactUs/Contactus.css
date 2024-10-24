@@ -1,0 +1,103 @@
+.contactus{
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    top: 6vh;
+    position: relative;
+    width: 1080px;
+}
+
+.contactinfo{
+    background-color: #fff;
+    padding: 6px 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.contactinfo h3{
+    color: black;
+    font-weight: 600;
+    position: relative;
+    left: 1vw;
+    top: 5vh;
+}
+
+.contactinfo h4{
+    position: relative;
+    top: 6vh;
+    left: 1.2vw;
+    color: gray;
+}
+
+.form input.Name1{
+    position: relative;
+    top: 7vh;
+    height: 5vh;
+    width: 19vw;
+    left: 2vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+.form input.email1{
+    position: relative;
+    top: 8vh;
+    height: 5vh;
+    width: 19vw;
+    left: 2vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+.form input.contact1{
+    position: relative;
+    top: 9vh;
+    height: 5vh;
+    width: 19vw;
+    left: 2vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+.form input.message1{
+    position: relative;
+    padding: 50px 2px;
+    top: 10vh;
+    height: 5vh;
+    width: 19.7vw;
+    left: 2vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+
+Button.btnsubmit{
+    position: relative;
+    top: 25vh;
+    right: 19.2vw;
+    color: white;
+    border: 1px solid black;
+    background-color: #f49200;
+    padding: 7px 2vw;
+}
+
+Button.btnsubmit:hover{
+    color: orange;
+    background-color: white;
+}
+
+Button.btncancel{
+    position: relative;
+    top: 12.8vh;
+    left: 9.5vw;
+    color: white;
+    border: 1px solid black;
+    background-color: #f49200;
+    padding: 7px 2vw;
+}
+
+Button.btn3:hover{
+    color: orange;
+    background-color: white;
+}

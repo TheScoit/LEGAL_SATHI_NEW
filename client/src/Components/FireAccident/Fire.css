@@ -1,0 +1,45 @@
+.familypage{
+    /* overflow: hidden; */
+    height: 140vh;
+    background-color: #343434;
+    display:flex;
+    flex-direction: row;
+
+}
+
+.familyimage img{  
+    width: 480px;
+    position: relative;
+    top: 14.4vh;
+    border-radius: 5px;
+    right: 2vw;
+}
+
+.familyinfo{
+    padding: 100px;
+    /* background-color: blue; */
+    width: 50vw;
+}
+
+.familyinfo p{
+    color: white;
+    font-size: 2.5vh;
+}
+.familyinfo p span{
+    color: #f49200;
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+
+.familypage Button{
+    font-weight: 700;
+    position: relative;  
+    height: 5vh;
+    color: #343434;
+    background-color: white;
+    top: 5vh;
+}
+.familypage Button:hover{
+    background-color: #000;
+    color: #fff;
+}

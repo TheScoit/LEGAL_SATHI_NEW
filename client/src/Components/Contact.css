@@ -1,0 +1,99 @@
+.contact__page{
+    height: 82.2vh;
+    width: 100%;
+    background-color: #343434;
+    position: relative;
+    top: 100vh;
+    display: inline-flex;
+    overflow: hidden;
+}
+.image img{
+    width: 1000px;
+}
+.info{
+    height: 82.2vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+.info h1{
+    color: white;
+    font-weight: 400;
+    position: relative;
+    left: 3.9vw;
+    top: 7vh;
+}
+.info h5{
+    color: white;
+    font-weight: 400;
+    position: relative;
+    bottom: 2vh;
+    left: 4vw;
+}
+
+input.firstName{
+    position: relative;
+    top: 10vh;
+    height: 5vh;
+    width: 8vw;
+    left: 8vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+input.lastName{
+    position: relative;
+    top: 10vh;
+    height: 5vh;
+    width: 8.5vw;
+    left: 11vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+
+input.email{
+    position: relative;
+    top: 12vh;
+    height: 5vh;
+    width: 19vw;
+    left: 8vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+textarea.message1{
+    position: relative;
+    top: 17vh;
+    width: 19.9vw;
+    left: 8vh;
+    border: 1px solid lightgray;
+    
+}
+
+textarea::placeholder{
+    position: absolute;
+    top: 1vh; 
+}
+
+input.contact{
+    position: relative;
+    top: 14vh;
+    height: 5vh;
+    width: 19vw;
+    left: 8vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+
+Button.btn{
+    position: relative;
+    top: 26vh;
+    right: 16vw;
+    color: white;
+    border: 1px solid black;
+    background-color: #f49200;
+    padding: 7px 2vw;  
+}
+
+Button.btn:hover{
+    color: orange;
+    background-color: white;
+}
