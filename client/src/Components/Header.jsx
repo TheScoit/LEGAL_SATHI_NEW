@@ -31,7 +31,7 @@ function Header() {
   }
 
   const handleLogout = async() =>{
-      await axios.get("https://legal-sathi-backend.onrender.com/api/v1/user/litigant/logout",{
+      await axios.get("https://legalsathi.onrender.com/api/v1/user/litigant/logout",{
         withCredentials:true,
       })
       .then((res) =>{

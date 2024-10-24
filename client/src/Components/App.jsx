@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get('https://legal-sathi-backend.onrender.com/api/v1/user/litigant/me', {
+        const response = await axios.get('https://legalsathi.onrender.com/api/v1/user/litigant/me', {
           withCredentials: true,
         });
         setIsAuthenticated(true);

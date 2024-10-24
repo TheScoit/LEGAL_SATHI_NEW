@@ -27,7 +27,7 @@ const Signup = () => {
   const handleRegister = async(e) =>{
     e.preventDefault();
     try {
-      const response = await axios.post("https://legal-sathi-backend.onrender.com/api/v1/user/litigant/register",
+      const response = await axios.post("https://legalsathi.onrender.com/api/v1/user/litigant/register",
       {firstName,lastName,email,password,dob,gender,phone ,role:"Litigant"},
       {
        withCredentials : true,

@@ -13,7 +13,7 @@ const Contact = () => {
   const handleMessage = async(e) =>{
     e.preventDefault();
     try {
-      await axios.post("https://legal-sathi-backend.onrender.com/api/v1/message/send",{firstName,lastName,email,contact,message} , {
+      await axios.post("https://legalsathi.onrender.com/api/v1/message/send",{firstName,lastName,email,contact,message} , {
         withCredentials:true,
         headers:{
           "Content-Type":"application/json",

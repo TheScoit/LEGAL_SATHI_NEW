@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors({
-    origin:["https://lawsuit-rambos-projects-a1065a11.vercel.app","https://legal-sathi-dashboard.vercel.app"],
+    origin:"https://legalsathi.onrender.com",
     methods: ["GET","POST","PUT","DELETE"],
     credentials: true,
     })

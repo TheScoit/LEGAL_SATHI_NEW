@@ -24,7 +24,7 @@ function SignIn() {
   const handleLogin = async(e) =>{
     e.preventDefault();
     try {
-      const response = await axios.post("https://legal-sathi-backend.onrender.com/api/v1/user/login",
+      const response = await axios.post("https://legalsathi.onrender.com/api/v1/user/login",
       {email, password , confirmPassword , role:"Litigant"},
       {
        withCredentials : true,
