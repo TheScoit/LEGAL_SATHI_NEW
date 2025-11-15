@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { ThemeProvider } from './ThemeContext.jsx';
 
 export const Context = createContext({isAuthenticated: false});
 
@@ -11,7 +12,9 @@ const AppWrapper = () =>{
 
   return(
     <Context.Provider value={{ isAuthenticated, setIsAuthenticated, user, setUser}}>
-      <App />
+       <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </Context.Provider>
   )
 }

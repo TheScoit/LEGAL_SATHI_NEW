@@ -1,6 +1,6 @@
 import express from 'express';
 import { deleteAppointment, getAllAppointments, postAppointment, updateAppointmentStatus } from '../controllers/appointment.Controller.js';
-import {isAdminAuthenticated,isLitigantAuthenticated} from '../middlewares/auth.js'
+import {isAdminAuthenticated,isAuthenticatedUser, isLitigantAuthenticated} from '../middlewares/auth.js'
 const router = express.Router();
 
 

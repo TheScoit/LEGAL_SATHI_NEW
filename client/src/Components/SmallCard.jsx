@@ -1,21 +1,13 @@
-  import React from 'react'
-import './SmallCard.css'
-
-const SmallCard = ({src,title,description}) => {
+const SmallCard = ({ src, title, description, className }) => {
   return (
-    <div>
-        <div className="smallcard">
-            <img src={src} alt="" />
-            <div className="smallcard__info">
-            <h2>{title}</h2>
-            <h4>{description}</h4>
-            </div>
-        </div>
-            <div className="goto__icon">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/014/637/978/small_2x/thin-straight-arrow-icon-black-arrow-pointing-to-the-right-black-direction-pointer-with-rounded-edges-illustration-vector.jpg" alt="" />
-            </div>
+    <div className={`flex flex-col items-center text-center ${className}`}>
+      <div className="w-20 h-20 mb-4 flex items-center justify-center rounded-full bg-orange-100">
+        <img src={src} alt={title} className="w-12 h-12 object-contain" />
+      </div>
+      <h3 className="text-xl font-semibold text-orange-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default SmallCard
+export default SmallCard;

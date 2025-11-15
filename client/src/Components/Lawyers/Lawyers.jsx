@@ -1,61 +1,146 @@
-import React from 'react'
-import './Lawyers.css'
-import Layerscard from './Layerscard'
-import { Button } from '@mui/material'
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import Layerscard from "./Layerscard";
+import axios from "axios";
 
 const Lawyers = () => {
-  const navigateTo = useNavigate();
-  const gotoHome = () =>{
-    navigateTo("/")
-  }
-  return (
-    <>
-     <div className="lawyer_page">
-      <div className="our_expert">
-        <h2>Our Expert Lawyer</h2>
-        <div className="our_expertup">
-        <Layerscard
-        src="https://t3.ftcdn.net/jpg/00/69/90/62/360_F_69906272_95xqHEpDgZTq2MUBHKMUtO4vB3uyIxHI.jpg"
-        name="Farhan Shaikh"
-        occupation="Civil Lawyer"
-        />
-        <Layerscard
-        src="https://media.istockphoto.com/id/639115088/photo/portrait-of-a-business-man-outdoors.jpg?s=612x612&w=0&k=20&c=dHjVqovQs0sLEpB9lzPuD8q91rOtLk4seVEjxC6GdrM="
-        name="Mohd Saad Shaikh"
-        occupation="Divorce Lawyer"/>
-        <Layerscard
-        src="https://t4.ftcdn.net/jpg/02/95/96/79/360_F_295967926_T2nUnmhQc00dwwp3KsvJSPHMP2xhekry.jpg"
-        name="Arsalan Shaikh"
-        occupation="Criminal Lawyer"/>
-        <Layerscard
-        src="https://static.vecteezy.com/system/resources/thumbnails/032/411/190/small/a-male-lawyer-stands-confidently-in-the-courtroom-a-portrait-capturing-his-professionalism-and-dedication-to-the-law-generative-ai-photo.jpg"
-        name="Azaz Ahmed"
-        occupation="Constitutional Lawyer"/>
-        </div>
-        <div className="our_expertdown">
-        <Layerscard
-        src="https://thumbs.dreamstime.com/b/portrait-male-african-american-professional-possibly-business-executive-corporate-ceo-finance-attorney-lawyer-sales-stylish-155546880.jpg"
-        name="Soham Roy"
-        occupation="Family Lawyer"/>
-        <Layerscard
-        src="https://www.huntonak.com/images/content/2/5/v2/25800/Levine-Michael.jpg"
-        name="Rahul Chaturvedi"
-        occupation="Corporate Lawyer"/>
-        <Layerscard
-        src="https://media.istockphoto.com/id/514165852/photo/successful-man-portrait.jpg?s=612x612&w=0&k=20&c=P3qvqTEAFXZlD-Uw1fMflEZxThPRBqiP5ls6IP-AWHA="
-        name="Samar Yadav"
-        occupation="Employment Lawyer"/>
-        <Layerscard
-        src="https://thelawyer.imgix.net/content/uploads/2020/12/15164744/Banning-Fred-scaled.jpg?auto=compress,format&q=60&w=652&h=434"
-        name="Arbaz khan"
-        occupation="Immigration lawyer"/>
-        </div> 
-        <Button variant='text' onClick={gotoHome}>Home</Button>   
-      </div>
-     </div>
-    </>
-  )
-}
+  const [lawyers, setLawyers] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-export default Lawyers
+  // Filter values
+  const [department, setDepartment] = useState("");
+  const [gender, setGender] = useState("");
+
+  // Dropdown toggle
+  const [showFilter, setShowFilter] = useState(false);
+
+  useEffect(() => {
+    const fetchLawyers = async () => {
+      try {
+        const res = await axios.get(
+          "http://localhost:5757/api/v1/user/attorney"
+        );
+        const array = Array.isArray(res.data?.Attorneys)
+          ? res.data.Attorneys
+          : [];
+
+        setLawyers(array);
+        setFiltered(array);
+      } catch (error) {
+        console.error("Failed to fetch lawyers:", error);
+        setLawyers([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLawyers();
+  }, []);
+
+  // Unique departments
+  const departments = [...new Set(lawyers.map((l) => l.attorneyDepartment))];
+
+  // Apply filters
+  // Apply filters
+useEffect(() => {
+  let data = [...lawyers];
+
+  if (department) {
+    data = data.filter((l) => l.attorneyDepartment === department);
+  }
+
+  if (gender) {
+    data = data.filter(
+      (l) => l.gender?.toLowerCase() === gender.toLowerCase()
+    );
+  }
+
+  setFiltered(data);
+}, [department, gender, lawyers]);
+
+
+  return (
+    <div className="min-h-screen bg-orange-50 py-12 px-4 md:px-10">
+
+      {/* Header */}
+      <div className="max-w-7xl mx-auto text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-700 mb-2">
+          Our Expert Lawyers
+        </h2>
+        <p className="text-gray-600 text-lg">Professional and experienced legal team</p>
+
+        
+      </div>
+
+      {/* Small Filter Button */}
+        <div className="max-w-7xl mx-auto flex justify-end mb-6 relative ">
+        <button
+          onClick={() => setShowFilter((prev) => !prev)}
+          className="bg-orange-600 text-white px-4 py-2 rounded-lg shadow hover:bg-orange-700"
+        >
+          Filter
+        </button>
+
+      
+      
+
+        {/* Dropdown menu */}
+        {showFilter && (
+          <div className="absolute top-12 right-0 bg-white border shadow-lg rounded-lg p-4 w-60 z-10">
+            {/* Department */}
+            <label className="block text-sm font-medium mb-1">Department</label>
+            <select
+              className="w-full border px-3 py-2 rounded mb-4"
+              value={department}
+              onChange={(e) => setDepartment(e.target.value)}
+            >
+              <option value="">All</option>
+              {departments.map((dep) => (
+                <option key={dep} value={dep}>
+                  {dep}
+                </option>
+              ))}
+            </select>
+
+            {/* Gender */}
+            <label className="block text-sm font-medium mb-1">Gender</label>
+            <select
+              className="w-full border px-3 py-2 rounded"
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value="">All</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        )}
+      </div>
+
+      {/* Result Grid */}
+      {loading ? (
+        <p className="text-center text-gray-500">Loading lawyers...</p>
+      ) : filtered.length === 0 ? (
+        <p className="text-center text-gray-500">No lawyers found.</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-6 gap-6">
+          {filtered.map((lawyer) => (
+            <Layerscard
+              key={lawyer._id}
+              id={lawyer._id}
+              src={lawyer.AttorneyAvatar?.url}
+              name={`${lawyer.firstName} ${lawyer.lastName}`}
+              occupation={lawyer.attorneyDepartment}
+              email={lawyer.email}
+              phone={lawyer.phone}
+              dob={lawyer.dob}
+              gender={lawyer.gender}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Lawyers;
